@@ -1,27 +1,34 @@
-# FCM REST
-FCM implementation based on REST API with proxy support. No dependencies on firebase framework.
+# FCM-REST
+[![npm](https://flat.badgen.net/npm/v/fcm-rest)](https://npmjs.com/package/fcm-rest)
+[![npm license](https://flat.badgen.net/npm/license/fcm-rest)](https://npmjs.com/package/fcm-rest)
+[![npm downloads](https://flat.badgen.net/npm/dm/fcm-rest)](https://npmjs.com/package/fcm-rest)
+
+FCM implementation based on REST API, supports proxy. No dependencies on firebase framework.
+
+Implements ```send-message``` HTTP APIs ```v1``` and ```legacy```
+
+https://firebase.google.com/docs/cloud-messaging/send-message#send_using_the_fcm_legacy_http_api
 
 ## Installation
 ```
-npm install fcm-lite
+npm install fcm-rest
 ```
 ## Usage
 ```
-// esm
-import fcm from 'fcm-lite/index.mjs'
+import fcm from 'fcm-rest/index.mjs'
+//const fcm = require('fcm-rest')
 
-// cjs
-//const fcm = require('fcm-lite')
-
-// message recipient
+// recipient
 const clientToken = 'ZkVNZ...'
-
+```
+```
 // Use legacy FCM API
 const serverKey = 'AAAA...'
 await fcm.sendMessageLegacy(serverKey, clientToken, {
   notification: { title: 'Hi there' }
 })
-
+```
+```
 // Use v1 FCM API
 const gcpServiceAccount = {
   client_email: '***',

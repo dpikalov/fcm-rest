@@ -1,7 +1,7 @@
 {
   "name": "fcm-rest",
   "version": "1.0.0",
-  "description": "",
+  "description": "FCM (send-message) implementation based on REST API, supports proxy",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,12 +10,10 @@
     "url": "https://github.com/dpikalov/fcm-rest.git"
   },
   "keywords": [
-    "fcm",
-    "firebase",
-    "push",
-    "notification",
-    "service account",
-    "gcp"
+    "fcm", "firebase",
+    "push", "notification",
+    "legacy", "v1", "rest",
+    "gcp", "service account"
   ],
   "author": "dpikalov",
   "license": "MIT",
