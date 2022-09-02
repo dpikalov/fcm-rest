@@ -7,10 +7,10 @@ FCM implementation based on REST API, supports proxy. No dependencies on firebas
 
 Implements ```send-message``` HTTP APIs ```v1``` and ```legacy```
 
-**Legacy API**
+**Legacy API**  
 https://firebase.google.com/docs/cloud-messaging/send-message#send_using_the_fcm_legacy_http_api
 
-**V1 API**
+**V1 API**  
 https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages
 
 
