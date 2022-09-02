@@ -7,7 +7,12 @@ FCM implementation based on REST API, supports proxy. No dependencies on firebas
 
 Implements ```send-message``` HTTP APIs ```v1``` and ```legacy```
 
+**Legacy API**
 https://firebase.google.com/docs/cloud-messaging/send-message#send_using_the_fcm_legacy_http_api
+
+**V1 API**
+https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages
+
 
 ## Installation
 ```
@@ -15,7 +20,7 @@ npm install fcm-rest
 ```
 ## Usage
 ```
-import fcm from 'fcm-rest/index.mjs'
+import fcm from 'fcm-rest'
 //const fcm = require('fcm-rest')
 
 // recipient
@@ -40,4 +45,11 @@ await fcm.sendMessageV1(gcpServiceAccount, clientToken, {
   notification: { title: 'Hi there' }
 })
 
+```
+```
+// Send v1 topic
+await fcm.sendMessageV1(gcpServiceAccount, undefined, {
+  notification: { title: 'Hi there' },
+  topic: 'topic-name'
+})
 ```
